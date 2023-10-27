@@ -1,7 +1,7 @@
 import openai from "@/lib/openai";
 import { createClient } from "@/lib/supabase/supabase-server";
 import { NextResponse } from "next/server";
-const apiKey = "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"
+const apiKey = ""
 
 export async function POST(req: Request): Promise<Response> {
   const { message, model } = await req.json();
