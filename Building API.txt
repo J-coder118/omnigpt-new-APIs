@@ -1,0 +1,25 @@
+
+1.searchHistoryAPI
+const searchHistroyAPI = await fetch("/api/supabase/searchHistoryAPI", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ messages, model, chat_id, owner_id}),
+});
+
+2.updateChatEmbedingsAPI
+const response = await fetch("/api/supabase/message", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            message: messages,
+	    model: model
+          }),
+        });
+
+
+Each message should have these data.
+message: { chat: thread_id, content: message, prompt: prompt, token_size}
